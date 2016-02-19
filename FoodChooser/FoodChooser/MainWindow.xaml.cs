@@ -24,12 +24,6 @@ namespace FoodChooser
         //Instantiate a Random
         Random random = new Random();
 
-        //Create two enums with the values for driving and food places
-        string[] drivers = new string[] { "Kelsey", "Richard", "Matt", "Jason" };
-        string[] foodPlaces = new string[] { "Arby's", "Burger King", "Chick-fil-a", "King Buffet", "Dairy Queen",
-        "Fazoli's", "Firehouse", "ihop", "KFC", "LJS", "Mancino's", "Panda Express", "Penn Station", "Puerta", "Q-doba",
-        "Scotty's", "Steak 'n Shake", "Taco Bell", "Thai Smile", "Wendy's"};
-
         public MainWindow()
         {
             InitializeComponent();
@@ -38,23 +32,158 @@ namespace FoodChooser
         private void GetFood_Click(object sender, RoutedEventArgs e)
         {
             //Clear the textboxes
-            OutputDriving.Text = "";
-            OutputGoing.Text = "";
+            outputDriving.Text = "";
+            outputDestination.Text = "";
 
-            //Create ArrayLists to add the arrays into
-            ArrayList driver = new ArrayList();
-            driver.AddRange(drivers);
-            ArrayList food = new ArrayList();
-            food.AddRange(foodPlaces);
+            //Create ArrayLists to add the names and destinations
+            List<string> driver = new List<string>();
+            List<string> food = new List<string>();
 
-            //Create two random int to pick the two needed values based on the arrayList Size
-            int d = random.Next(driver.Count);
-            int f = random.Next(food.Count);
+            //Determine by checkboxes if that person is driving or not and add to the ArrayList if they are
+            if (kelseyDriverBox.IsChecked.HasValue && kelseyDriverBox.IsChecked.Value)
+            {
+                driver.Add("Kelsey");
+            }
 
-            //Write the values in the txt boxes
-            OutputDriving.Text = (string)driver[d];
-            OutputGoing.Text = (string)food[f];
+            if (mattDriverBox.IsChecked.HasValue && mattDriverBox.IsChecked.Value)
+            {
+                driver.Add("Matt");
+            }
 
+            if (richardDriverBox.IsChecked.HasValue && richardDriverBox.IsChecked.Value)
+            {
+                driver.Add("Richard");
+            }
+
+            if (jasonDriverBox.IsChecked.HasValue && jasonDriverBox.IsChecked.Value)
+            {
+                driver.Add("Jason");
+            }
+
+            if (otherDriverBox.IsChecked.HasValue && otherDriverBox.IsChecked.Value)
+            {
+                driver.Add(otherDriverTxt.Text);
+            }
+
+            //Determine by checkboxes what destinations are checked
+            if (foodBox1.IsChecked.HasValue && foodBox1.IsChecked.Value)
+            {
+                food.Add("Arby's");
+            }
+
+            if (foodBox2.IsChecked.HasValue && foodBox2.IsChecked.Value)
+            {
+                food.Add("Burger King");
+            }
+
+            if (foodBox3.IsChecked.HasValue && foodBox3.IsChecked.Value)
+            {
+                food.Add("Chick-fil-a");
+            }
+
+            if (foodBox4.IsChecked.HasValue && foodBox4.IsChecked.Value)
+            {
+                food.Add("KFC");
+            }
+
+            if (foodBox5.IsChecked.HasValue && foodBox5.IsChecked.Value)
+            {
+                food.Add("King Buffet");
+            }
+
+            if (foodBox6.IsChecked.HasValue && foodBox6.IsChecked.Value)
+            {
+                food.Add("Fazoli's");
+            }
+
+            if (foodBox7.IsChecked.HasValue && foodBox7.IsChecked.Value)
+            {
+                food.Add("Firehouse");
+            }
+
+            if (foodBox8.IsChecked.HasValue && foodBox8.IsChecked.Value)
+            {
+                food.Add("iHop");
+            }
+
+            if (foodBox9.IsChecked.HasValue && foodBox9.IsChecked.Value)
+            {
+                food.Add("Mancino's");
+            }
+
+            if (foodBox10.IsChecked.HasValue && foodBox10.IsChecked.Value)
+            {
+                food.Add("Dairy Queen");
+            }
+
+            if (foodBox11.IsChecked.HasValue && foodBox11.IsChecked.Value)
+            {
+                food.Add("LJS");
+            }
+
+            if (foodBox12.IsChecked.HasValue && foodBox12.IsChecked.Value)
+            {
+                food.Add("Penn Station");
+            }
+
+            if (foodBox13.IsChecked.HasValue && foodBox13.IsChecked.Value)
+            {
+                food.Add("Puerta");
+            }
+
+            if (foodBox14.IsChecked.HasValue && foodBox14.IsChecked.Value)
+            {
+                food.Add("Q-Doba");
+            }
+
+            if (foodBox15.IsChecked.HasValue && foodBox15.IsChecked.Value)
+            {
+                food.Add("Panda Express");
+            }
+
+            if (foodBox16.IsChecked.HasValue && foodBox16.IsChecked.Value)
+            {
+                food.Add("Scotty's");
+            }
+
+            if (foodBox17.IsChecked.HasValue && foodBox17.IsChecked.Value)
+            {
+                food.Add("Thai Smile");
+            }
+
+            if (foodBox18.IsChecked.HasValue && foodBox18.IsChecked.Value)
+            {
+                food.Add("Taco Bell");
+            }
+
+            if (foodBox19.IsChecked.HasValue && foodBox19.IsChecked.Value)
+            {
+                food.Add("Wnedy's");
+            }
+
+            if (foodBox20.IsChecked.HasValue && foodBox20.IsChecked.Value)
+            {
+                food.Add("Steak 'N Shake");
+            }
+
+            // Check if either array is null, if it is throw a message box and break the button function
+            if (driver.Count == 0 || food.Count == 0)
+            {
+                MessageBox.Show("There is no driver, no destination, or both selected!");
+                outputDriving.Text = "";
+                outputDestination.Text = "";
+                return;
+            }
+            else
+            {
+                //Create random int to pick the needed values based on the arrayList Size
+                int d = random.Next(driver.Count);
+                int f = random.Next(food.Count);
+
+                //Write the values in the txt box
+                outputDriving.Text = (string)driver[d];
+                outputDestination.Text = (string)food[f];
+            }
         }
     }
 }
