@@ -16,7 +16,6 @@ C:\Users\Richard\Source\Repos\TheFoodChooser\FoodChooser\FoodChooser\obj\Debug\F
 C:\Users\Richard\Source\Repos\TheFoodChooser\FoodChooser\FoodChooser\obj\Debug\FoodChooser.pdb
 C:\Users\Richard\Source\Repos\TheFoodChooser\FoodChooser\FoodChooser\bin\Debug\FoodChooser.exe
 C:\Users\Richard\Source\Repos\TheFoodChooser\FoodChooser\FoodChooser\bin\Debug\FoodChooser.pdb
-C:\Users\Richard\Source\Repos\TheFoodChooser\FoodChooser\FoodChooser\obj\Debug\FoodChooser.csprojResolveAssemblyReference.cache
 C:\Users\Richard\Source\Repos\TheFoodChooser\FoodChooser\FoodChooser\obj\Debug\MainWindow.g.cs
 C:\Users\Richard\Source\Repos\TheFoodChooser\FoodChooser\FoodChooser\obj\Debug\App.g.cs
 C:\Users\Richard\Source\Repos\TheFoodChooser\FoodChooser\FoodChooser\obj\Debug\FoodChooser_MarkupCompile.cache
