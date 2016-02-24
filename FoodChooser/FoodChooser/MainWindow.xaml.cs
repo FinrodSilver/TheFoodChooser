@@ -60,9 +60,16 @@ namespace FoodChooser
                 driver.Add("Jason");
             }
 
-            if (otherDriverBox.IsChecked.HasValue && otherDriverBox.IsChecked.Value)
+            if (otherDriverBox.IsChecked.HasValue && otherDriverBox.IsChecked.Value && otherDriverTxt.Text != "")
             {
                 driver.Add(otherDriverTxt.Text);
+            }
+            else if (otherDriverBox.IsChecked.HasValue && otherDriverBox.IsChecked.Value && otherDriverTxt.Text == "")
+            {
+                MessageBox.Show("There is no driver put into the textbox!");
+                outputDriving.Text = "";
+                outputDestination.Text = "";
+                return;
             }
 
             //Determine by checkboxes what destinations are checked
@@ -184,6 +191,21 @@ namespace FoodChooser
                 outputDriving.Text = (string)driver[d];
                 outputDestination.Text = (string)food[f];
             }
+        }
+
+        // Turns textbox on if the button is checked
+        private void otherDriverBox_Checked(object sender, RoutedEventArgs e)
+        {
+            otherDriverTxt.Clear();
+            otherDriverTxt.IsEnabled = true;
+
+        }
+
+        // Turns textoff if the button is unchecked
+        private void otherDriverBox_Unchecked(object sender, RoutedEventArgs e)
+        {
+            otherDriverTxt.Clear();
+            otherDriverTxt.IsEnabled = false;
         }
     }
 }

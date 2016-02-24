@@ -16,7 +16,7 @@
         <CheckBox x:Name="jasonDriverBox" Content="Jason" HorizontalAlignment="Left" Margin="112,70,0,0" VerticalAlignment="Top" FontFamily="Showcard Gothic" IsChecked="True"/>
         <CheckBox x:Name="richardDriverBox" Content="Richard" HorizontalAlignment="Left" Margin="211,70,0,0" VerticalAlignment="Top" FontFamily="Showcard Gothic" IsChecked="True"/>
         <CheckBox x:Name="kelseyDriverBox" Content="Kelsey" HorizontalAlignment="Left" Margin="315,70,0,0" VerticalAlignment="Top" FontFamily="Showcard Gothic" IsChecked="True"/>
-        <CheckBox x:Name="otherDriverBox" Content="" HorizontalAlignment="Left" Margin="407,70,0,0" VerticalAlignment="Top" FontFamily="Showcard Gothic"/>
+        <CheckBox x:Name="otherDriverBox" Content="" HorizontalAlignment="Left" Margin="407,70,0,0" VerticalAlignment="Top" FontFamily="Showcard Gothic" Checked="otherDriverBox_Checked" Unchecked="otherDriverBox_Unchecked"/>
         <CheckBox x:Name="foodBox1" Content="Arby's" HorizontalAlignment="Left" Margin="17,145,0,0" VerticalAlignment="Top" FontFamily="Showcard Gothic" IsChecked="True"/>
         <CheckBox x:Name="foodBox2" Content="Burger King" HorizontalAlignment="Left" Margin="99,145,0,0" VerticalAlignment="Top" FontFamily="Showcard Gothic" IsChecked="True"/>
         <CheckBox x:Name="foodBox3" Content="Chick-fil-a" HorizontalAlignment="Left" Margin="211,145,0,0" VerticalAlignment="Top" FontFamily="Showcard Gothic" IsChecked="True"/>
@@ -37,7 +37,7 @@
         <CheckBox x:Name="foodBox18" Content="Taco Bell" HorizontalAlignment="Left" Margin="211,205,0,0" VerticalAlignment="Top" FontFamily="Showcard Gothic" IsChecked="True"/>
         <CheckBox x:Name="foodBox17" Content="Thai Smile" HorizontalAlignment="Left" Margin="99,205,0,0" VerticalAlignment="Top" FontFamily="Showcard Gothic" IsChecked="True"/>
         <CheckBox x:Name="foodBox19" Content="Wendy's" HorizontalAlignment="Left" Margin="309,205,0,0" VerticalAlignment="Top" FontFamily="Showcard Gothic" IsChecked="True"/>
-        <TextBox x:Name="otherDriverTxt" HorizontalAlignment="Left" Height="18" Margin="432,67,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="59" FontFamily="Showcard Gothic"/>
+        <TextBox x:Name="otherDriverTxt" HorizontalAlignment="Left" Height="18" Margin="432,67,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="59" FontFamily="Showcard Gothic" IsEnabled="False"/>
         <TextBox x:Name="outputDriving" HorizontalAlignment="Left" Height="23" Margin="10,253,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontFamily="Showcard Gothic" IsReadOnly="True"/>
         <TextBox x:Name="outputDestination" HorizontalAlignment="Left" Height="23" Margin="157,253,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="158" FontFamily="Showcard Gothic" IsReadOnly="True"/>
         <Label x:Name="driverLabel" Content="Driver:" HorizontalAlignment="Left" Margin="10,225,0,0" VerticalAlignment="Top" FontFamily="Showcard Gothic"/>

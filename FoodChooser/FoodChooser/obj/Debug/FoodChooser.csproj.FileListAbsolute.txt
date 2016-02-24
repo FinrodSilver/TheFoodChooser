@@ -24,3 +24,4 @@ C:\Users\Richard\Source\Repos\TheFoodChooser\FoodChooser\FoodChooser\obj\Debug\M
 C:\Users\Richard\Source\Repos\TheFoodChooser\FoodChooser\FoodChooser\obj\Debug\FoodChooser.g.resources
 C:\Users\Richard\Source\Repos\TheFoodChooser\FoodChooser\FoodChooser\obj\Debug\FoodChooser.Properties.Resources.resources
 C:\Users\Richard\Source\Repos\TheFoodChooser\FoodChooser\FoodChooser\obj\Debug\FoodChooser.csproj.GenerateResource.Cache
+C:\Users\Richard\Source\Repos\TheFoodChooser\FoodChooser\FoodChooser\obj\Debug\FoodChooser.csprojResolveAssemblyReference.cache
